@@ -28,7 +28,7 @@ export default function Home() {
         <div className="about-content">
                 <h2 className="heading">About Me</h2>
                 <h3>Web Developer</h3>
-            <p className="margin-right: 20rem;">I'm a dedicated frontend developer with expertise in React and Next.js, passionate about leveraging modern tech stacks to build responsive, high-performance web applications. My work focuses on creating seamless, user-centric experiences that drive innovation and engagement.</p>
+            <p className="margin-right: 20rem;">I am a dedicated frontend developer with expertise in React and Next.js, passionate about leveraging modern tech stacks to build responsive, high-performance web applications. My work focuses on creating seamless, user-centric experiences that drive innovation and engagement.</p>
             <a href="https://www.linkedin.com/in/anishsukhramani/" target="_blank" className="btn-invert">Read More</a>
         </div>
         <div className="about-img">
