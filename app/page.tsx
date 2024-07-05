@@ -81,7 +81,7 @@ export default function Home() {
         <div className="lg:w-[50%] flex justify-center items-center">
           <div>
 
-          <h1 className="text-white text-2xl md:text-6xl pb-6 font-bold text-justify lg:items-center lg:align-middle lg:text-right px-10">Let's Connect!</h1>
+          <h1 className="text-white text-2xl md:text-6xl pb-6 font-bold text-justify lg:items-center lg:align-middle lg:text-right px-10">Let&apos;s Connect!</h1>
 
           <LinkPreviewDemo />
 
