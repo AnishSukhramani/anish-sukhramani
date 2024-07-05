@@ -2,32 +2,194 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.custom-hover:hover {
+    color: white;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
   }
+
+@font-face {
+    font-family: "Apple-heading";
+    src: url("/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF") format("opentype");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+    font-family: "Apple-thin";
+    src: url("/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.about {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10%; */
+    background: var(--second-bg-color);
+    color: var(--text-color-black);
+
 }
+.about-img img{
+    /* height: 60vh; */
+    width: 80vw;
+    bottom: 0;
+}
+/* .about-content{
+    padding-right: 10%;
+} */
+.heading{
+    text-align: center;
+    font-size: 2.5rem;
+    /* my addition */
+    padding-bottom: 0%;
+    font-family: 'Apple-heading';
+    transition: .3s ease-in-out;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+    font-family: 'Apple-heading';
+}
+.about-content h3{
+    margin-top: 1rem;
+    font-family: 'Apple-heading';
+    font-size: 1.6rem;
+    /* my addition */
+    /* padding-bottom: 5%; */
+}
+.about-content p{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 2rem 0rem 3rem;
+    margin-right: 10rem;
+    /* padding-bottom: 18%; */
+    font-family: 'Apple-thin';
+    color: rgb(35, 35, 35);
+}
+.btn-invert{
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    background: white;
+    /* border-radius: 4rem 0 4rem 0; */
+    /* border-radius: 0 4rem 0 4rem; */
+    border-radius: 20px;
+    box-shadow: none;
+    font-size: 1rem;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s;
+    border: 1px solid rgb(0, 0, 0);
+    font-family: 'Apple-thin';
+}
+.btn-invert:hover{
+    /* box-shadow: 0 0 1rem white; */
+    background: black;
+    color: rgb(255, 254, 254);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+    #menu-icon{
+        display: block;
+    }
+    .home-img img{
+        margin-left: 0;/*my addition */
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        /* my addition */
+        background-size: cover;
+        /* my addition ends */
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-family: 'Apple-heading';
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-family: 'Apple-heading';
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-content p{
+        padding: 1%;
+        margin: 1%;
+        gap: 0;
+    }
+    .about-content{
+        padding: 1%;
+        margin: 1%;
+        gap: 0;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 365px){
+    .home-img img{
+        margin-left: 0;
+        width: 90vw;
+    }
+    .about-img img{
+        width: 100vw;
+        bottom: 0;
+        
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
